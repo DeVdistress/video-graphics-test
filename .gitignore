@@ -1,0 +1,9 @@
+/Make.debug
+/cmem_buf.o
+/disp_obj.o
+/gc320.o
+/main.o
+/qpa_ctl.o
+/qrc_video_graphics_test.o
+/v4l2_obj.o
+/video_graphics_test.o
