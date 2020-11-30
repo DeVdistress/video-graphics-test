@@ -7,3 +7,5 @@
 /qrc_video_graphics_test.o
 /v4l2_obj.o
 /video_graphics_test.o
+/.dbeaver/
+/video_graphics_test
