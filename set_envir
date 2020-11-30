@@ -1,0 +1,24 @@
+#!/bin/bash
+
+MODULE="galcore"
+
+if ps aux | grep -q "[w]eston" ; then
+    echo "weston should stoped" ; 
+    /etc/init.d/weston stop ;
+fi
+
+if [ "$QT_QPA_EGLFS_INTEGRATION" != "eglfs_km" ]
+then
+    echo "should do it export of QT_QPA_EGLFS_INTEGRATION" ;
+    export QT_QPA_EGLFS_INTEGRATION=eglfs_km ;
+fi
+
+if lsmod | grep "$MODULE" &> /dev/null ; then
+    echo "$MODULE is loaded early!"
+else
+    echo "$MODULE is not loaded!"
+    if [ -e "/lib/modules/4.14.79-gbde58ab01e/extra/galcore.ko" ]; then
+	echo "Loading module of kernel ${MODULE}.ko"
+	insmod /lib/modules/4.14.79-gbde58ab01e/extra/galcore.ko baseAddress=0x80000000 physSize=0x80000000
+    fi
+fi

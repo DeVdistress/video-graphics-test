@@ -1,0 +1,31 @@
+ifndef CONFIG
+ CONFIG = debug
+endif
+
+TARGET_FILE=video_graphics_test
+
+PAR="CONFIG_RD=$(CONFIG)"
+
+TARGET_STATIC= ./build/$(CONFIG)/$(TARGET_FILE)
+
+all:
+	bash -c "qmake $(PAR) ./video_graphics_test.pro -o Make.$(CONFIG) && make -f Make.$(CONFIG)"
+	
+release:
+	make CONFIG=release
+	
+debug:
+	make CONFIG=debug	
+
+clean: clean_release clean_debug
+	rm -fr obj build Make.release Make.debug
+
+clean_release:
+	$(if $(wildcard Make.release),\
+	make -f Make.release clean,\
+	$(info Make.release is missing, bye bye))
+	
+clean_debug:
+	$(if $(wildcard Make.debug),\
+	make -f Make.debug clean,\
+	$(info Make.debug is missing, bye bye))

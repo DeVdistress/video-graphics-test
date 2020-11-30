@@ -1,0 +1,17 @@
+
+https://git.ti.com/cgit/graphics/ti-gc320-test/?h=ti-5.0.11.p7
+for cloning:
+Clone
+https://git.ti.com/git/graphics/ti-gc320-test.git
+https://git.ti.com/cgit/graphics/ti-gc320-test
+git://git.ti.com/graphics/ti-gc320-test.git
+http://git.ti.com/git/graphics/ti-gc320-test.git
+
+
+http://e2e.ti.com/support/processors/f/791/t/864155?AM5728-Video-graphics-test
+https://git.ti.com/cgit/sitara-linux/video-graphics-test/
+for cloning:
+https://git.ti.com/git/sitara-linux/video-graphics-test.git
+https://git.ti.com/cgit/sitara-linux/video-graphics-test
+git://git.ti.com/sitara-linux/video-graphics-test.git
+http://git.ti.com/git/sitara-linux/video-graphics-test.git
