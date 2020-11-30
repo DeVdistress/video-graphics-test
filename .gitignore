@@ -9,3 +9,6 @@
 /video_graphics_test.o
 /.dbeaver/
 /video_graphics_test
+/.qmake.stash
+/doc/.gitignore
+
